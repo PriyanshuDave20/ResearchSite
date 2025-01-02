@@ -1,60 +1,58 @@
 ---
 type: Post
 title: Machine Learning Models for Predicting Stock Closing Prices Using Historical Data
-description: >-
-  Consider that for a moment: everything we see around us is assumed to have had
-  a cause and is contingent upon.
 date: '2025-01-01'
 ---
 
-# Abstract
+## Abstract
 
-### This research investigates the use of machine learning models for stock price prediction, with a focus on predicting the closing price based on historical stock data, including high, low, and opening prices. The dataset is sourced from Yahoo Finance, where preprocessing steps such as handling missing values, duplicates, and outliers, as well as feature normalization, are performed to optimize model performance. A diverse set of models, including Linear Regression, Support Vector Regression (SVR), Feedforward Neural Networks (FNN), Convolutional Neural Networks (CNN), Random Forest Regression, Gradient Boosting Regression, Elastic Net, k-Nearest Neighbors, Extreme Learning Machine (ELM), and Bayesian Ridge Regression, are trained and evaluated. The results indicate that models such as Linear Regression (R² = 0.9999), Feedforward Neural Networks (R² = 0.9999), and Extreme Learning Machine (R² = 0.9999) achieved the highest predictive accuracy, with minimal mean squared error (MSE) values. These models, when trained on the high, low, and opening prices, demonstrated strong performance in predicting the closing price. Support Vector Regression, Elastic Net, and Gradient Boosting Regression also showed promising results, with MSE values below 0.005 and R² values exceeding 0.97. This study highlights the effectiveness of using historical price data (high, low, and opening prices) for predicting stock closing prices, providing valuable insights for financial forecasting and decision-making.
+This research investigates the use of machine learning models for stock price prediction, with a focus on predicting the closing price based on historical stock data, including high, low, and opening prices. The dataset is sourced from Yahoo Finance, where preprocessing steps such as handling missing values, duplicates, and outliers, as well as feature normalization, are performed to optimize model performance. A diverse set of models, including Linear Regression, Support Vector Regression (SVR), Feedforward Neural Networks (FNN), Convolutional Neural Networks (CNN), Random Forest Regression, Gradient Boosting Regression, Elastic Net, k-Nearest Neighbors, Extreme Learning Machine (ELM), and Bayesian Ridge Regression, are trained and evaluated. The results indicate that models such as Linear Regression (R² = 0.9999), Feedforward Neural Networks (R² = 0.9999), and Extreme Learning Machine (R² = 0.9999) achieved the highest predictive accuracy, with minimal mean squared error (MSE) values. These models, when trained on the high, low, and opening prices, demonstrated strong performance in predicting the closing price. Support Vector Regression, Elastic Net, and Gradient Boosting Regression also showed promising results, with MSE values below 0.005 and R² values exceeding 0.97. This study highlights the effectiveness of using historical price data (high, low, and opening prices) for predicting stock closing prices, providing valuable insights for financial forecasting and decision-making.
 
-# Introduction
 
-## Background
-### Stock market forecasting has long been a challenge for investors, analysts, and financial institutions due to the complex and volatile nature of stock prices. Traditional methods, such as fundamental analysis or technical indicators, often provide limited accuracy, prompting a shift towards machine learning models to predict stock price movements more effectively. Machine learning techniques, particularly those leveraging historical price data, have shown promise in forecasting stock prices with improved accuracy. Recent advances in deep learning, such as feedforward and convolutional neural networks, further enhance the potential for accurate predictions. This study aims to explore the predictive capabilities of various machine learning algorithms, including linear regression, support vector regression, neural networks, and ensemble methods, using historical stock data—specifically, the high, low, and opening prices—to predict the closing price.
+## Introduction
 
-## Problem Statement
-### The problem addressed in this research is the difficulty in accurately predicting stock prices, particularly the closing price, based on historical market data. While machine learning models have been applied to stock price forecasting, there is a need to evaluate the performance of different algorithms in predicting the closing price, based on features such as the high, low, and opening prices. This research aims to investigate the effectiveness of these algorithms and determine which model can provide the most reliable prediction of the closing price.
+### Background
+Stock market forecasting has long been a challenge for investors, analysts, and financial institutions due to the complex and volatile nature of stock prices. Traditional methods, such as fundamental analysis or technical indicators, often provide limited accuracy, prompting a shift towards machine learning models to predict stock price movements more effectively. Machine learning techniques, particularly those leveraging historical price data, have shown promise in forecasting stock prices with improved accuracy. Recent advances in deep learning, such as feedforward and convolutional neural networks, further enhance the potential for accurate predictions. This study aims to explore the predictive capabilities of various machine learning algorithms, including linear regression, support vector regression, neural networks, and ensemble methods, using historical stock data—specifically, the high, low, and opening prices—to predict the closing price.
 
-## Objectives
-### The primary objective of this study is to compare the performance of several machine learning models in predicting the closing stock price based on historical data. Specifically, the study seeks to:
+### Problem Statement
+The problem addressed in this research is the difficulty in accurately predicting stock prices, particularly the closing price, based on historical market data. While machine learning models have been applied to stock price forecasting, there is a need to evaluate the performance of different algorithms in predicting the closing price, based on features such as the high, low, and opening prices. This research aims to investigate the effectiveness of these algorithms and determine which model can provide the most reliable prediction of the closing price.
+
+### Objectives
+The primary objective of this study is to compare the performance of several machine learning models in predicting the closing stock price based on historical data. Specifically, the study seeks to:
 
 *   Evaluate the predictive accuracy of linear regression, support vector regression, feedforward neural networks, convolutional neural networks, random forest regression, gradient boosting regression, elastic net, k-nearest neighbors, extreme learning machine, and Bayesian ridge regression.
 *   Investigate the impact of using high, low, and opening prices as features for predicting the closing price.
 *   Identify the models with the lowest mean squared error (MSE) and highest R² scores, signaling the best performance for stock price prediction.
 
-## Research Questions/Hypotheses
+### Research Questions/Hypotheses
 
-### This study seeks to answer the following research questions:
+This study seeks to answer the following research questions:
 1.   How do different machine learning algorithms compare in terms of their prediction accuracy (MSE and R² scores) for stock closing prices?
 2.   What impact does the use of high, low, and opening prices have on the accuracy of stock price predictions?
 
-### The hypotheses for this study are as follows:
+#### The hypotheses for this study are as follows:
 *   H₁: Machine learning models, particularly deep learning models like feedforward and convolutional neural networks, will demonstrate superior predictive accuracy for stock closing prices compared to traditional algorithms such as linear regression and support vector regression.
 
 *   H₂: The use of high, low, and opening prices as features will significantly improve the accuracy of stock price predictions when compared to using only closing prices.
 
-## Significance of the Study
-### This research is significant for investors, financial analysts, and trading systems, as accurate stock price predictions can lead to more informed decision-making and better portfolio management. By comparing various machine learning models and utilizing multiple features such as high, low, and opening prices, the study aims to identify the most effective methods for predicting stock closing prices. The findings from this research may contribute to the growing body of knowledge on applying machine learning techniques in finance and provide practical insights for developing predictive models in real-world financial markets.
+### Significance of the Study
+This research is significant for investors, financial analysts, and trading systems, as accurate stock price predictions can lead to more informed decision-making and better portfolio management. By comparing various machine learning models and utilizing multiple features such as high, low, and opening prices, the study aims to identify the most effective methods for predicting stock closing prices. The findings from this research may contribute to the growing body of knowledge on applying machine learning techniques in finance and provide practical insights for developing predictive models in real-world financial markets.
 
-# Methodology
+## Methodology
 
-## Data Collection
-### The dataset for this study was obtained from Yahoo Finance using the yfinance library. Historical stock data for multiple tickers were downloaded, covering the specified date range. The dataset included key daily stock information such as the high, low, opening, closing prices, and trading volume. The primary objective was to use the high, low, and opening prices as input features to predict the closing price. 
+### Data Collection
+The dataset for this study was obtained from Yahoo Finance using the yfinance library. Historical stock data for multiple tickers were downloaded, covering the specified date range. The dataset included key daily stock information such as the high, low, opening, closing prices, and trading volume. The primary objective was to use the high, low, and opening prices as input features to predict the closing price. 
 
-## Data Preprocessing
-###Prior to model training, the dataset underwent several preprocessing steps to ensure its quality and suitability for machine learning algorithms:
+### Data Preprocessing
+Prior to model training, the dataset underwent several preprocessing steps to ensure its quality and suitability for machine learning algorithms:
 
 1.   Handling Missing Values and Duplicates: Any rows with missing values (NaN) were removed, as these could introduce bias and negatively impact the performance of the models. Duplicates were also removed to preserve data integrity.
 2.   Outlier Detection and Removal: Z-score filtering was applied to identify and remove outliers. This helped eliminate extreme values that could distort the model's ability to learn the underlying patterns of stock price movement.
 3.   Feature Engineering: The selected features for the prediction task were the high, low, and opening prices. These variables were used as input predictors to model the closing price.
 4.   Normalization: To optimize model training, the features and target variables (high, low, opening, and closing prices) were scaled using the MinMaxScaler from the scikit-learn library. Normalizing the data ensured that the models could converge more effectively during training.
 
-## Model Training
-### Several machine learning models were employed to predict the stock closing price based on the high, low, and opening prices:
+### Model Training
+Several machine learning models were employed to predict the stock closing price based on the high, low, and opening prices:
 
 1.   Linear Regression
 2.   Support Vector Regression (SVR)
@@ -67,17 +65,17 @@ date: '2025-01-01'
 9.   Extreme Learning Machine (ELM)
 10.  Bayesian Ridge Regression
 
-### Each model was trained using the preprocessed data, with the aim of optimizing their parameters to predict the closing price accurately. In addition, hyperparameter tuning was performed using GridSearchCV for Random Forest and SVR. Model ensembling was applied through stacking, combining predictions from multiple models.
+Each model was trained using the preprocessed data, with the aim of optimizing their parameters to predict the closing price accurately. In addition, hyperparameter tuning was performed using GridSearchCV for Random Forest and SVR. Model ensembling was applied through stacking, combining predictions from multiple models.
 
-## Model Evaluation
-###After training, the models were evaluated on a separate test dataset. Performance was assessed using the following metrics:
+### Model Evaluation
+After training, the models were evaluated on a separate test dataset. Performance was assessed using the following metrics:
 
 1.   Mean Squared Error (MSE): The average squared difference between the predicted and actual closing prices. A lower MSE indicates better predictive performance.
 2.   R² Score: The proportion of variance in the target variable (closing price) explained by the model. A higher R² value (closer to 1) signifies better model fit.
 
-###These metrics were computed for each model, and averaging all of the 6 stocks, allowing for a direct comparison of their predictive accuracy.
+These metrics were computed for each model, and averaging all of the 6 stocks, allowing for a direct comparison of their predictive accuracy.
 
-# Findings
+## Findings
 |----------------------------|-------------------|----------|
 |Model                       | Mean Squared Error| R Squared|
 |Linear Regression           |	       1.1792e-05|	  0.9999|
@@ -91,55 +89,53 @@ date: '2025-01-01'
 |Extreme Learning Machine    |	       1.1811e-05|	  0.9999|
 |Bayesian Ridge              |	       1.1789e-05|	  0.9989|
 
-### The results of the model evaluations were summarized by comparing the average MSE and R² scores for each model. The top-performing models were identified based on their ability to minimize MSE and maximize the R² score. For instance, the Linear Regression, Feedforward Neural Network (FNN), and Extreme Learning Machine (ELM) models achieved average R² values close to 0.9999 and average MSE values near zero, demonstrating superior predictive accuracy. Models such as Support Vector Regression, Elastic Net, and Gradient Boosting Regression also exhibited solid performance, though with slightly higher MSE values and lower R² scores in comparison to the best models. 
+The results of the model evaluations were summarized by comparing the average MSE and R² scores for each model. The top-performing models were identified based on their ability to minimize MSE and maximize the R² score. For instance, the Linear Regression, Feedforward Neural Network (FNN), and Extreme Learning Machine (ELM) models achieved average R² values close to 0.9999 and average MSE values near zero, demonstrating superior predictive accuracy. Models such as Support Vector Regression, Elastic Net, and Gradient Boosting Regression also exhibited solid performance, though with slightly higher MSE values and lower R² scores in comparison to the best models. 
 
-# Conclusion
+## Conclusion
 
-### The results of this study demonstrate the effectiveness of various machine learning models in predicting stock closing prices using historical high, low, and opening prices. By evaluating multiple machine learning algorithms, including traditional methods such as Linear Regression and Support Vector Regression (SVR), as well as more advanced techniques like Feedforward Neural Networks (FNN), Convolutional Neural Networks (CNN), and Extreme Learning Machines (ELM), the study sought to determine which models are best suited for stock price prediction.
+The results of this study demonstrate the effectiveness of various machine learning models in predicting stock closing prices using historical high, low, and opening prices. By evaluating multiple machine learning algorithms, including traditional methods such as Linear Regression and Support Vector Regression (SVR), as well as more advanced techniques like Feedforward Neural Networks (FNN), Convolutional Neural Networks (CNN), and Extreme Learning Machines (ELM), the study sought to determine which models are best suited for stock price prediction.
 
-## Research Question 1: How do different machine learning algorithms compare in terms of their prediction accuracy (MSE and R² scores) for stock closing prices?
-### The comparison of algorithms revealed that Feedforward Neural Networks (FNN) and Extreme Learning Machines (ELM) achieved the lowest MSE and the highest R² scores among all models. Linear Regression also performed well, with a very low MSE of 1.18e-05 and an R² score of 0.9999, suggesting its strong predictive capability despite being a simpler model. In contrast, Support Vector Regression (SVR) and Elastic Net had higher MSE values (0.0032 and 0.0011, respectively) and lower R² scores, which indicated their relatively weaker performance in this task. The deep learning models, particularly FNN and CNN, showed promising results, but did not surpass the best traditional models in terms of accuracy.
+### Research Question 1: How do different machine learning algorithms compare in terms of their prediction accuracy (MSE and R² scores) for stock closing prices?
+The comparison of algorithms revealed that Feedforward Neural Networks (FNN) and Extreme Learning Machines (ELM) achieved the lowest MSE and the highest R² scores among all models. Linear Regression also performed well, with a very low MSE of 1.18e-05 and an R² score of 0.9999, suggesting its strong predictive capability despite being a simpler model. In contrast, Support Vector Regression (SVR) and Elastic Net had higher MSE values (0.0032 and 0.0011, respectively) and lower R² scores, which indicated their relatively weaker performance in this task. The deep learning models, particularly FNN and CNN, showed promising results, but did not surpass the best traditional models in terms of accuracy.
 
-## Research Question 2: What impact does the use of high, low, and opening prices have on the accuracy of stock price predictions?
-### Incorporating high, low, and opening prices significantly improved the accuracy of the predictions compared to models using only the closing price. The additional features provided models with a more comprehensive understanding of price dynamics, leading to more precise predictions. This was particularly evident in models such as Linear Regression, Random Forest Regression, and Extreme Learning Machine, which achieved very low MSE and high R² scores when utilizing all three price features.
+### Research Question 2: What impact does the use of high, low, and opening prices have on the accuracy of stock price predictions?
+Incorporating high, low, and opening prices significantly improved the accuracy of the predictions compared to models using only the closing price. The additional features provided models with a more comprehensive understanding of price dynamics, leading to more precise predictions. This was particularly evident in models such as Linear Regression, Random Forest Regression, and Extreme Learning Machine, which achieved very low MSE and high R² scores when utilizing all three price features.
 
-## Hypothesis 1: Machine learning models, particularly deep learning models like feedforward and convolutional neural networks, will demonstrate superior predictive accuracy for stock closing prices compared to traditional algorithms such as linear regression and support vector regression.
-### This hypothesis was not supported by the findings. While deep learning models like Feedforward Neural Networks (FNN) and Convolutional Neural Networks (CNN) showed strong performance, the Linear Regression model and Extreme Learning Machine (ELM) outperformed them in terms of predictive accuracy, confirming that even traditional machine learning techniques can be highly effective in stock price prediction when applied properly. However, deep learning methods still demonstrated significant potential, particularly in capturing complex data patterns.
+### Hypothesis 1: Machine learning models, particularly deep learning models like feedforward and convolutional neural networks, will demonstrate superior predictive accuracy for stock closing prices compared to traditional algorithms such as linear regression and support vector regression.
+This hypothesis was not supported by the findings. While deep learning models like Feedforward Neural Networks (FNN) and Convolutional Neural Networks (CNN) showed strong performance, the Linear Regression model and Extreme Learning Machine (ELM) outperformed them in terms of predictive accuracy, confirming that even traditional machine learning techniques can be highly effective in stock price prediction when applied properly. However, deep learning methods still demonstrated significant potential, particularly in capturing complex data patterns.
 
-## Hypothesis 2: The use of high, low, and opening prices as features will significantly improve the accuracy of stock price predictions when compared to using only closing prices.
-### This hypothesis was confirmed through the results, as models using high, low, and opening prices performed significantly better than those using only the closing price. For instance, Extreme Learning Machine (ELM) and Feedforward Neural Networks (FNN), which incorporated all three features, achieved near-perfect R² scores (over 0.9999) and extremely low MSE values, indicating that these additional features enriched the model's ability to predict the closing price accurately.
+### Hypothesis 2: The use of high, low, and opening prices as features will significantly improve the accuracy of stock price predictions when compared to using only closing prices.
+This hypothesis was confirmed through the results, as models using high, low, and opening prices performed significantly better than those using only the closing price. For instance, Extreme Learning Machine (ELM) and Feedforward Neural Networks (FNN), which incorporated all three features, achieved near-perfect R² scores (over 0.9999) and extremely low MSE values, indicating that these additional features enriched the model's ability to predict the closing price accurately.
 
-# Limitations
+## Limitations
 
-### While the findings of this study provide valuable insights into the predictive capabilities of various machine learning models for stock price forecasting, several limitations should be considered when interpreting the results:
+While the findings of this study provide valuable insights into the predictive capabilities of various machine learning models for stock price forecasting, several limitations should be considered when interpreting the results:
 
-## 1. Data Source Limitations:
-### The dataset used in this study was sourced exclusively from historical stock price data (high, low, opening, and closing prices) retrieved from Yahoo Finance. While this data serves as a valuable indicator of market trends, it fails to incorporate other critical variables that could influence stock prices, such as: sentiment analysis from financial news or social media, macroeconomic factors, like GDP growth rates, inflation, and interest rates. Company-specific events, such as earnings reports, product launches, or management changes. The absence of such features limits the model's ability to predict stock prices based on a holistic view of the market environment.
+### 1. Data Source Limitations:
+The dataset used in this study was sourced exclusively from historical stock price data (high, low, opening, and closing prices) retrieved from Yahoo Finance. While this data serves as a valuable indicator of market trends, it fails to incorporate other critical variables that could influence stock prices, such as: sentiment analysis from financial news or social media, macroeconomic factors, like GDP growth rates, inflation, and interest rates. Company-specific events, such as earnings reports, product launches, or management changes. The absence of such features limits the model's ability to predict stock prices based on a holistic view of the market environment.
 
-## 2. Model Interpretability:
-### Deep learning models such as Feedforward Neural Networks (FNN) and Convolutional Neural Networks (CNN) demonstrated strong predictive performance; however, they also posed challenges in terms of interpretability. These models are often considered "black-box" algorithms, meaning that while they may produce accurate predictions, their decision-making process is not easily understood or explainable. In real-world financial applications, model transparency is crucial for decision-making, making simpler models like Linear Regression more appealing despite their lower predictive accuracy in this study.
+### 2. Model Interpretability:
+Deep learning models such as Feedforward Neural Networks (FNN) and Convolutional Neural Networks (CNN) demonstrated strong predictive performance; however, they also posed challenges in terms of interpretability. These models are often considered "black-box" algorithms, meaning that while they may produce accurate predictions, their decision-making process is not easily understood or explainable. In real-world financial applications, model transparency is crucial for decision-making, making simpler models like Linear Regression more appealing despite their lower predictive accuracy in this study.
 
-## 3. Overfitting and Generalization:
-### The study observed high R² values and low MSE for several models, particularly Linear Regression, FNN, and Extreme Learning Machine (ELM). However, these models could be at risk of overfitting, where they perform exceptionally well on the training dataset but struggle to generalize to new, unseen data. Overfitting is a common challenge in stock market prediction due to the high volatility and non-stationary nature of financial markets, suggesting that further validation with out-of-sample data is needed to confirm the robustness of the models.
+### 3. Overfitting and Generalization:
+The study observed high R² values and low MSE for several models, particularly Linear Regression, FNN, and Extreme Learning Machine (ELM). However, these models could be at risk of overfitting, where they perform exceptionally well on the training dataset but struggle to generalize to new, unseen data. Overfitting is a common challenge in stock market prediction due to the high volatility and non-stationary nature of financial markets, suggesting that further validation with out-of-sample data is needed to confirm the robustness of the models.
 
-## 4. Temporal and Market Dependencies:
-### Stock market data is inherently time-dependent and non-stationary, which presents a challenge for predictive models. This study relied on historical data without considering market regime shifts (e.g., bull vs. bear markets), sudden market disruptions, or exogenous events (e.g., financial crises, geopolitical events). These temporal dependencies can significantly affect the accuracy of predictions, and while techniques like time-series models (e.g., LSTM) are designed to handle such dependencies, they may still struggle with major shifts or anomalies in market behavior.
+### 4. Temporal and Market Dependencies:
+Stock market data is inherently time-dependent and non-stationary, which presents a challenge for predictive models. This study relied on historical data without considering market regime shifts (e.g., bull vs. bear markets), sudden market disruptions, or exogenous events (e.g., financial crises, geopolitical events). These temporal dependencies can significantly affect the accuracy of predictions, and while techniques like time-series models (e.g., LSTM) are designed to handle such dependencies, they may still struggle with major shifts or anomalies in market behavior.
 
-## 5. Hyperparameter Sensitivity:
-### Many machine learning models, such as Random Forest, Gradient Boosting, and Support Vector Regression, are highly sensitive to hyperparameter settings. In this study, hyperparameters were tuned using cross-validation; however, the optimal hyperparameters for one dataset may not generalize well to other datasets or future stock data. Fine-tuning hyperparameters requires significant computational resources and could lead to suboptimal results if not carefully handled.
+### 5. Hyperparameter Sensitivity:
+Many machine learning models, such as Random Forest, Gradient Boosting, and Support Vector Regression, are highly sensitive to hyperparameter settings. In this study, hyperparameters were tuned using cross-validation; however, the optimal hyperparameters for one dataset may not generalize well to other datasets or future stock data. Fine-tuning hyperparameters requires significant computational resources and could lead to suboptimal results if not carefully handled.
 
-## 6. Computational Complexity:
-### The deep learning models employed in this study, such as FNN and CNN, require substantial computational resources for training, especially when dealing with large datasets. This makes them less practical for real-time stock prediction applications unless adequate infrastructure is available. Moreover, training times can be long, which could hinder the adoption of these models in fast-paced financial environments.
+### 6. Computational Complexity:
+The deep learning models employed in this study, such as FNN and CNN, require substantial computational resources for training, especially when dealing with large datasets. This makes them less practical for real-time stock prediction applications unless adequate infrastructure is available. Moreover, training times can be long, which could hinder the adoption of these models in fast-paced financial environments.
 
-## 7. Market Anomalies and Irregularities:
+### 7. Market Anomalies and Irregularities:
+Stock prices are influenced not only by market fundamentals but also by factors such as rumors, market manipulation, and sudden policy changes. These unpredictable and often non-systematic events can lead to large swings in stock prices, which are difficult for any predictive model to capture. Thus, while the models in this study demonstrated strong predictive capabilities, their performance may be adversely affected by such market anomalies.
 
-### Stock prices are influenced not only by market fundamentals but also by factors such as rumors, market manipulation, and sudden policy changes. These unpredictable and often non-systematic events can lead to large swings in stock prices, which are difficult for any predictive model to capture. Thus, while the models in this study demonstrated strong predictive capabilities, their performance may be adversely affected by such market anomalies.
+### 8. Limited Scope of Evaluation:
+The study focused on predicting stock closing prices based solely on historical data from a single source (Yahoo Finance) over a specified period (2012-2024). While the results are promising, the generalizability of these models across different time periods, stock tickers, or market conditions is yet to be fully explored. Future studies could investigate the performance of these models across various datasets and market scenarios to validate their robustness.
 
-## 8. Limited Scope of Evaluation:
+## Appendix
 
-### The study focused on predicting stock closing prices based solely on historical data from a single source (Yahoo Finance) over a specified period (2012-2024). While the results are promising, the generalizability of these models across different time periods, stock tickers, or market conditions is yet to be fully explored. Future studies could investigate the performance of these models across various datasets and market scenarios to validate their robustness.
-
-# Appendix
-
-##Link to source code 
+### Link to source code 
 [https://github.com/PriyanshuDave20/PredictiveModelling/blob/cc11901d5585992a7e71f222de28824d238a4637/ClosingPricePrediction.py](https://github.com/PriyanshuDave20/PredictiveModelling/blob/cc11901d5585992a7e71f222de28824d238a4637/ClosingPricePrediction.py)
