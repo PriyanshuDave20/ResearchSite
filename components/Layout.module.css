@@ -38,7 +38,7 @@
     radial-gradient(at 76% 46%, var(--color-gradient-1) 0, transparent 50%);
   /* mix-blend-mode: normal; */
   height: 600px;
-  max-width: 900px;
+  max-width: 1100px;
   width: 55vw;
   width: 100%;
   filter: blur(44px);
